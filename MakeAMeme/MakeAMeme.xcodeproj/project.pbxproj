@@ -14,6 +14,7 @@
 		934EC0BB1CD4335100A21896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934EC0B91CD4335100A21896 /* LaunchScreen.storyboard */; };
 		934EC0C61CD4335100A21896 /* MakeAMemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EC0C51CD4335100A21896 /* MakeAMemeTests.swift */; };
 		934EC0D11CD4335100A21896 /* MakeAMemeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EC0D01CD4335100A21896 /* MakeAMemeUITests.swift */; };
+		934EC0E11CD557F800A21896 /* MemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EC0E01CD557F800A21896 /* MemeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		934EC0CC1CD4335100A21896 /* MakeAMemeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeAMemeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		934EC0D01CD4335100A21896 /* MakeAMemeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeAMemeUITests.swift; sourceTree = "<group>"; };
 		934EC0D21CD4335100A21896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		934EC0E01CD557F800A21896 /* MemeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				934EC0B71CD4335100A21896 /* Assets.xcassets */,
 				934EC0B91CD4335100A21896 /* LaunchScreen.storyboard */,
 				934EC0BC1CD4335100A21896 /* Info.plist */,
+				934EC0E01CD557F800A21896 /* MemeModel.swift */,
 			);
 			path = MakeAMeme;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				934EC0B31CD4335100A21896 /* ViewController.swift in Sources */,
+				934EC0E11CD557F800A21896 /* MemeModel.swift in Sources */,
 				934EC0B11CD4335100A21896 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +488,7 @@
 				934EC0D71CD4335100A21896 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		934EC0D81CD4335100A21896 /* Build configuration list for PBXNativeTarget "MakeAMemeTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				934EC0DA1CD4335100A21896 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		934EC0DB1CD4335100A21896 /* Build configuration list for PBXNativeTarget "MakeAMemeUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				934EC0DD1CD4335100A21896 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MakeAMeme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MakeAMeme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -34,41 +34,46 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UXN-B3-oyi">
-                                <rect key="frame" x="0.0" y="28" width="414" height="664"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="628"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8wo-BI-HMR" userLabel="topTextField">
-                                <rect key="frame" x="159" y="48" width="97" height="17"/>
+                                <rect key="frame" x="203" y="100" width="8" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jTg-Db-hKc" userLabel="bottomTextField">
-                                <rect key="frame" x="159" y="646" width="97" height="17"/>
+                                <rect key="frame" x="203" y="635" width="8" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iK9-P5-vg5">
-                                <rect key="frame" x="7" y="35" width="46" height="30"/>
-                                <state key="normal" title="Share"/>
-                                <connections>
-                                    <action selector="shareButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B6m-bh-Rjw"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wW-Vj-z7w">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="l9c-2b-9BT">
+                                        <connections>
+                                            <action selector="shareButtonPressed:" destination="BYZ-38-t0r" id="lqo-Ov-Ezt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jTg-Db-hKc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1lO-ev-3AK"/>
-                            <constraint firstItem="UXN-B3-oyi" firstAttribute="trailing" secondItem="Wmx-RC-NUG" secondAttribute="trailing" id="3Q7-pf-9Vo"/>
-                            <constraint firstItem="UXN-B3-oyi" firstAttribute="leading" secondItem="Wmx-RC-NUG" secondAttribute="leading" id="5yY-bl-40q"/>
-                            <constraint firstItem="8wo-BI-HMR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="139" id="8ZB-bt-afH"/>
-                            <constraint firstItem="8wo-BI-HMR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Huu-R6-zG3"/>
-                            <constraint firstItem="Wmx-RC-NUG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Mr4-me-qcq"/>
-                            <constraint firstItem="UXN-B3-oyi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="RrT-fk-kJo"/>
-                            <constraint firstItem="Wmx-RC-NUG" firstAttribute="top" secondItem="jTg-Db-hKc" secondAttribute="bottom" constant="29" id="ZcO-jD-x6z"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wmx-RC-NUG" secondAttribute="bottom" id="aby-ZG-Ws8"/>
-                            <constraint firstItem="UXN-B3-oyi" firstAttribute="bottom" secondItem="Wmx-RC-NUG" secondAttribute="top" id="uDv-dF-PAR"/>
-                            <constraint firstItem="jTg-Db-hKc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="139" id="uyE-w4-YRZ"/>
-                            <constraint firstItem="8wo-BI-HMR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="wMV-pt-MxI"/>
-                            <constraint firstItem="Wmx-RC-NUG" firstAttribute="centerX" secondItem="jTg-Db-hKc" secondAttribute="centerX" id="whq-1U-ZEs"/>
+                            <constraint firstItem="5wW-Vj-z7w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="0FJ-Uc-13J"/>
+                            <constraint firstItem="UXN-B3-oyi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="3Lw-iN-f5P"/>
+                            <constraint firstItem="5wW-Vj-z7w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8f2-SC-dNH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5wW-Vj-z7w" secondAttribute="trailing" constant="-20" id="DFq-9S-2eK"/>
+                            <constraint firstItem="Wmx-RC-NUG" firstAttribute="top" secondItem="jTg-Db-hKc" secondAttribute="bottom" constant="40" id="INA-gf-Lpn"/>
+                            <constraint firstItem="5wW-Vj-z7w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="K2N-jN-PNB"/>
+                            <constraint firstItem="Wmx-RC-NUG" firstAttribute="top" secondItem="UXN-B3-oyi" secondAttribute="bottom" id="KyQ-uq-EgK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UXN-B3-oyi" secondAttribute="trailing" constant="-20" id="ZbH-P2-CsT"/>
+                            <constraint firstItem="UXN-B3-oyi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="aWa-Nj-8UA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wmx-RC-NUG" secondAttribute="bottom" id="bzd-EY-wH2"/>
+                            <constraint firstItem="8wo-BI-HMR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fHT-As-dE3"/>
+                            <constraint firstItem="jTg-Db-hKc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mhQ-hs-iRQ"/>
+                            <constraint firstItem="Wmx-RC-NUG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="nvl-mt-zGX"/>
+                            <constraint firstItem="8wo-BI-HMR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="tp1-JA-6Jz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wmx-RC-NUG" secondAttribute="trailing" constant="-20" id="u4r-Pj-Q2V"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -77,7 +82,7 @@
                         <outlet property="cameraButton" destination="4en-4Z-zTJ" id="QwS-4T-xOP"/>
                         <outlet property="imagePickerView" destination="UXN-B3-oyi" id="bmM-D7-EmD"/>
                         <outlet property="pickButton" destination="37L-aU-g8E" id="jUd-dc-K09"/>
-                        <outlet property="shareButton" destination="iK9-P5-vg5" id="oZY-to-5GL"/>
+                        <outlet property="shareButton" destination="l9c-2b-9BT" id="w5n-ce-QqE"/>
                         <outlet property="topTextField" destination="8wo-BI-HMR" id="coM-GO-trH"/>
                     </connections>
                 </viewController>
