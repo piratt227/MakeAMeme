@@ -29,29 +29,13 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         super.viewDidLoad()
         
         // Default text settings
-        let memeTextAttributes = [
-            NSStrokeColorAttributeName: UIColor .blackColor(),
-            NSForegroundColorAttributeName: UIColor .whiteColor(),
-            NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-            NSStrokeWidthAttributeName: Float(-3.0)
-        ]
-        
-        // Top Text Field
-        topTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.text = "TOP"
-        topTextField.textAlignment = .Center
-        topTextField.delegate = self
-        
-        
-        // Bottom Text Field
-        bottomTextField.defaultTextAttributes = memeTextAttributes
+        textStyle(topTextField)
+        textStyle(bottomTextField)
         bottomTextField.text = "BOTTOM"
-        bottomTextField.textAlignment = .Center
-        bottomTextField.delegate = self
-        
-    
+        topTextField.text = "TOP"
     }
-
+    
+    
     override func viewWillAppear(animated: Bool) {
         
         // Disable Camera Button if not Available
@@ -75,23 +59,26 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         unsubscribeFromKeyboardNotifications()
     }
 
-    
-    // Pick an image from Album
-    @IBAction func pickImageFromAlbum(sender: AnyObject) {
-        
+    func pickAnImage(){
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
-        pickerController.sourceType = .PhotoLibrary
         presentViewController(pickerController, animated: true, completion: nil)
     }
     
+    // Pick an image from Album
+    @IBAction func pickImageFromAlbum(sender: AnyObject) {
+        let pickerController = UIImagePickerController()
+        pickerController.sourceType = .PhotoLibrary
+        pickAnImage()
+        
+    }
+    
+    
     // Pick an image from Camera
     @IBAction func pickImageFromCamera(sender: AnyObject) {
-        
         let pickerController = UIImagePickerController()
-        pickerController.delegate = self
         pickerController.sourceType = .Camera
-        presentViewController(pickerController, animated: true, completion: nil)
+        pickAnImage()
     }
     
     // Show image in image view
@@ -187,5 +174,23 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         presentViewController(activityVC, animated: true, completion: nil)
     }
+    
+    // Set text field style
+    func textStyle(textField: UITextField){
+        let memeTextAttributes = [
+            NSStrokeColorAttributeName: UIColor .blackColor(),
+            NSForegroundColorAttributeName: UIColor .whiteColor(),
+            NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            NSStrokeWidthAttributeName: Float(-3.0)
+        ]
+        
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.delegate = self
+        textField.textAlignment = .Center
+        
+        
+    }
+
+    
 }
 
